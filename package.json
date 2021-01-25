@@ -1,0 +1,23 @@
+{
+  "name": "README-generator",
+  "version": "1.0.0",
+  "description": "a quick use template to generate consistent README's",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inqueblot/README-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inqueblot/README-generator/issues"
+  },
+  "homepage": "https://github.com/inqueblot/README-generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
