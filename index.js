@@ -7,8 +7,12 @@ const inquirer = require('inquirer');
 const questions = [
     {
         //pass questions here
-        name: 'Title',
+        name: 'title',
         message: 'What is the name of your project?'
+    },
+    {
+        name: 'description',
+        message: 'Please provide a description of your project',
     },
     {
         type: 'list',
