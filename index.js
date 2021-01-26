@@ -12,8 +12,21 @@ const questions = [
     },
     {
         name: 'description',
-        message: 'Please provide a description of your project',
+        message: 'Please provide a description of your project.',
     },
+    {
+        name: 'installation',
+        message: 'Are there any instructions for installation?'
+    },
+    {
+        name: 'usage',
+        message: 'please provide the most basic usage example.'
+    },
+    {
+        name: 'contributing',
+        message: 'what information would you like to communicate to potential collaborators?'
+    },
+
     {
         type: 'list',
         name: 'license',
