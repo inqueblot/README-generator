@@ -1,9 +1,7 @@
 
 
 function renderLicenseBadge(license) {
-  if (license != "none") {
-    badge = `![badge](https://img.shields.io/badge/license-${license}-green)`
-  }
+  badge = `![badge](https://img.shields.io/badge/license-${license}-green)`
   return badge
 };
 

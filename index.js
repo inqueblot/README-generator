@@ -45,7 +45,7 @@ const questions = [
 
 inquirer.prompt(questions).then((answers) => {
 
-    fs.writeFile('README.md', (generateMarkdown(answers)), (err) =>
+    fs.writeFile('testREADME.md', (generateMarkdown(answers)), (err) =>
         err ? console.log(err) : console.log('Success!')
     )
 });
