@@ -8,6 +8,24 @@ function renderLicenseBadge(license) {
   return badge
 };
 
+function renderLicenseLink(license) {
+  switch (license) {
+    case 'MIT':
+      text = "https://opensource.org/licenses/MIT"
+      break;
+    case 'GNU GPLv3':
+      text = "https://opensource.org/licenses/MIT"
+      break;
+    case 'Apache 2.0':
+      text = "https://opensource.org/licenses/Apache-2.0"
+      break;
+    default:
+      text = "";
+
+  }
+  return text;
+};
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   const markdown =
@@ -42,9 +60,8 @@ ${contributing}
 If you have any questions I can be contacted at ${email}
 link to my [github](https://github.com/${githubId})
 ## License
-[${license}](${LICENSE})
+[${license}](${renderLicenseLink(license)})`;
 
-`;
   return markdown
 };
 
