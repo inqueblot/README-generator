@@ -32,7 +32,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Does your project need a license?',
-        choices: ["MIT", "ICS", "Apache", "none"],
+        choices: ["MIT", "GNU GPLv3", "Apache 2.0", "none"],
     },
     {
         name: 'githubId',
@@ -48,6 +48,8 @@ const questions = [
 
 inquirer.prompt(questions).then((answers) => {
     console.log(answers);
+    fs.writeFile('README.md', generateMarkdown(answers), (err) => err ? console.error(err) : console.log('Success!')
+    );
 })
     .catch(error => {
         if (error.isTtyError) {
