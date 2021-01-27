@@ -1,6 +1,8 @@
 console.log(`Let's make a README! \n`)
 
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
+const fs = require('fs');
 
 
 
@@ -26,19 +28,26 @@ const questions = [
         name: 'contributing',
         message: 'what information would you like to communicate to potential collaborators?'
     },
-
     {
         type: 'list',
         name: 'license',
         message: 'Does your project need a license?',
-        choices: ["MIT", "ICS", "that other one"],
+        choices: ["MIT", "ICS", "Apache", "none"],
+    },
+    {
+        name: 'githubId',
+        message: 'What is your github username?'
+    },
+    {
+        name: 'email',
+        message: 'what email can people contact you at?'
     },
 ]
 
 
 
 inquirer.prompt(questions).then((answers) => {
-    console.log(JSON.stringify(answers, null, '  '));
+    console.log(answers);
 })
     .catch(error => {
         if (error.isTtyError) {
