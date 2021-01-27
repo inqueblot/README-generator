@@ -1,10 +1,7 @@
-console.log(`Let's make a README! \n`)
-
 const inquirer = require('inquirer');
-const generateMarkdown = require('./utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 const fs = require('fs');
-
-
+console.log(`Let's make a README! \n`)
 
 const questions = [
     {
@@ -42,19 +39,13 @@ const questions = [
         name: 'email',
         message: 'what email can people contact you at?'
     },
-]
+];
 
 
 
 inquirer.prompt(questions).then((answers) => {
-    console.log(answers);
-    fs.writeFile('README.md', generateMarkdown(answers), (err) => err ? console.error(err) : console.log('Success!')
-    );
-})
-    .catch(error => {
-        if (error.isTtyError) {
-            "prompt couldn't be rendered in the current environment"
-        } else {
-            "something else went wrong"
-        }
-    });
+
+    fs.writeFile('README.md', (generateMarkdown(answers)), (err) =>
+        err ? console.log(err) : console.log('Success!')
+    )
+});

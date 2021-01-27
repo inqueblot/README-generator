@@ -3,3 +3,4 @@ package-lock.json
 .DS_Store/
 pizza.js
 test.js
+markdown.md
